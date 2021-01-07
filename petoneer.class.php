@@ -40,7 +40,7 @@ class Petoneer {
 
     protected function login() {
         $data = array(
-                'languange' => 0,
+                'language' => 0,
                 'protocol' => 3,
         );
         $request = $this->post(json_encode($data), 'user/506');
