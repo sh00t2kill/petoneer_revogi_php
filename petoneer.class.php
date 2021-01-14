@@ -78,4 +78,23 @@ class Petoneer {
         $request = $this->post(json_encode($data), 'pww/31101');
         return $request;
     }
+    public function turn_on($device) {
+       $data = array(
+                'protocol' => 3,
+                'sn' => $device,
+                'switch' => 1,
+        );
+        $request = $this->post(json_encode($data), 'pww/21101');
+        return $request;
+    }
+
+    public function turn_off($device) {
+       $data = array(
+                'protocol' => 3,
+                'sn' => $device,
+                'switch' => 0,
+        );
+        $request = $this->post(json_encode($data), 'pww/21101');
+        return $request;
+    }
 }
